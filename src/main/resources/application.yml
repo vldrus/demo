@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+  shutdown: graceful
+
+spring:
+  profiles:
+    active: default
+  main:
+    banner-mode: off
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:demo
+    username: demo
+    password: demo
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    open-in-view: false
